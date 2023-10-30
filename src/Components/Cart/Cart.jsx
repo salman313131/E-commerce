@@ -37,10 +37,23 @@ quantity: 1,
 }
 
 ]
+import Modal from "../UI/Modal"
+import CartItem from "./CartItem"
 const Cart=(props)=>{
-    
+    const cartItem = <ul>
+        {cartElements.map(item=>(<CartItem name={item.title} price={item.price} qty={item.quantity}/>))}
+    </ul>
     return(
-        <></>
+        <Modal onClose={props.onClose}>
+            {cartItem}
+            <div>
+                <h3>Total</h3>
+                <div>
+                    <button>Purchase</button>
+                    <button onClick={props.onClose}>Close</button>
+                </div>
+            </div>
+        </Modal>
     )
 }
 export default Cart
