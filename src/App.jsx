@@ -1,9 +1,11 @@
 import './App.css'
-
+import Product from './Components/Layout/Product'
+import Header from './Components/UI/Header'
 function App() {
   return (
     <>
-      <h1>hello</h1>
+      <Header />
+      <Product />
     </>
   )
 }

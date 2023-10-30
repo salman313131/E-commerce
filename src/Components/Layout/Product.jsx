@@ -42,11 +42,14 @@ imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
 
 ]
 
-
+import ProductItem from "./ProductItem/ProductItem"
+import './Product.css'
 const Header=(props)=>{
-    
+    const items = productsArr.map(item=><ProductItem key={item.title} title={item.title} price={item.price} imgUrl={item.imageUrl}/>)
     return(
-        <div></div>
+        <section>
+            <ul className="ul_list-item">{items}</ul>
+        </section>
     )
 }
 export default Header
