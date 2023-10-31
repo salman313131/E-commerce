@@ -39,9 +39,12 @@ quantity: 1,
 ]
 import Modal from "../UI/Modal"
 import CartItem from "./CartItem"
+import CartContext from "../../Store/cart-context"
+import { useContext } from "react"
 const Cart=(props)=>{
+    const cartCtx = useContext(CartContext)
     const cartItem = <ul>
-        {cartElements.map(item=>(<CartItem name={item.title} price={item.price} qty={item.quantity}/>))}
+        {cartCtx.items.map(item=>(<CartItem name={item.title} price={item.price} qty={item.qty}/>))}
     </ul>
     return(
         <Modal onClose={props.onClose}>
