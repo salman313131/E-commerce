@@ -45,7 +45,11 @@ imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
 
 import ProductItem from "./ProductItem/ProductItem"
 import './Product.css'
+import { useEffect } from "react"
 const Header=(props)=>{
+    useEffect(async ()=>{
+        
+    },[])
     const items = productsArr.map(item=><ProductItem key={item.title} title={item.title} price={item.price} imgUrl={item.imageUrl}/>)
     return(
         <section>
