@@ -47,9 +47,6 @@ import ProductItem from "./ProductItem/ProductItem"
 import './Product.css'
 import { useEffect } from "react"
 const Header=(props)=>{
-    useEffect(async ()=>{
-        
-    },[])
     const items = productsArr.map(item=><ProductItem key={item.title} title={item.title} price={item.price} imgUrl={item.imageUrl}/>)
     return(
         <section>
