@@ -1,23 +1,16 @@
 import './App.css'
-import Product from './Components/Layout/Product'
-import Header from './Components/UI/Header'
-import Cart from './Components/Cart/Cart'
-import { useState } from 'react'
-import CartProvider from './Store/CartProvider'
+import Store from './Store'
+import About from './About'
+import Home from './Home'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+const router = createBrowserRouter([
+  {path:'/',element: <Store />},
+  {path:'/about',element: <About />},
+  {path: '/home',element: <Home />}
+])
 function App() {
-  const [isCart,setIsCart] = useState(false)
-  const cartShowHandler=()=>{
-    setIsCart(true)
-  }
-  const hideCartHandler=()=>{
-    setIsCart(false)
-  }
   return (
-    <CartProvider>
-      {isCart && <Cart onClose={hideCartHandler}/>}
-      <Header onShow={cartShowHandler}/>
-      <Product />
-    </CartProvider>
+    <RouterProvider router={router}/>
   )
 }
 
