@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 const Header=(props)=>{
     const cartCtx = useContext(CartContext)
-    const numberOfItems = cartCtx.items.length
+    const numberOfItems = cartCtx.items.
     return(
         <>
             <header className="header-cart">
@@ -12,6 +12,7 @@ const Header=(props)=>{
                     <Link to='/home'>Home</Link>
                     <Link to='/'>Store</Link>
                     <Link to='/about'>About</Link>
+                    <Link to='/login'>Login</Link>
                 </div>
                 <button className='header-cart_button' onClick={props.onShow}>
                     <span>Your Cart</span>
