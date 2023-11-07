@@ -1,8 +1,0 @@
-.header-cart{
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    border: 1px solid black;
-}
-body{
-    margin: 0;
-}

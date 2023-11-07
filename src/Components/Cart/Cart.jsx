@@ -50,7 +50,7 @@ const Cart=(props)=>{
         <Modal onClose={props.onClose}>
             {cartItem}
             <div>
-                <h3>Total</h3>
+                <h3>Total {cartCtx.totalAmount}</h3>
                 <div>
                     <button>Purchase</button>
                     <button onClick={props.onClose}>Close</button>
